@@ -1,3 +1,14 @@
+function playGame() {
+    if (argPlayerInput);
+    playGame(3);
+}
+
+function clearMessags() {
+
+}
+
+
+
 function getMoveName(argMoveId) {
     if (argMoveId == 1) {
         return 'kamień';
@@ -112,3 +123,16 @@ function displayResult(argPlayerMove) {
 
     console.log('moves:', argComputerMove, argPlayerMove);
 }
+
+
+document.getElementById('play-rock').addEventListener('click', function () {
+    printMessage('wybrano kamień');
+});
+
+document.getElementById('play-paper').addEventListener('click', function () {
+    printMessage('wybrano papier');
+});
+
+document.getElementById('play-scissors').addEventListener('click', function () {
+    printMessage('wybrano nożyce');
+});
