@@ -1,4 +1,7 @@
 function playGame(playerInput) {
+
+    clearMessages();
+
     function getMoveName(argMoveId) {
         if (argMoveId == 1) {
             return 'kamień';
@@ -13,7 +16,7 @@ function playGame(playerInput) {
 
     function displayResult(argComputerMove, argPlayerMove) {
         if (argComputerMove == argPlayerMove) {
-            console.log('REMIS');
+            printMessage('REMIS');
         } else if (
             (argPlayerMove == 'kamień' && argComputerMove == 'nożyce')
             ||
@@ -21,9 +24,9 @@ function playGame(playerInput) {
             ||
             (argPlayerMove == 'nożyce' && argComputerMove == 'papier')
         ) {
-            console.log('WYGRAŁEM');
+            printMessage('WYGRAŁEM');
         } else {
-            console.log('PRZEGRAŁEM');
+            printMessage('PRZEGRAŁEM');
         }
     }
 
@@ -31,8 +34,8 @@ function playGame(playerInput) {
     let computerMove = getMoveName(randomNumber);
     let playerMove = getMoveName(playerInput);
 
-    console.log('JA WYBRAŁEM:', playerMove);
-    console.log('KOMPUTER WYBRAŁ:', computerMove);
+    printMessage('JA WYBRAŁEM: ' + playerMove);
+    printMessage('KOMPUTER WYBRAŁ: ' + computerMove);
 
     displayResult(computerMove, playerMove);
 
